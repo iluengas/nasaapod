@@ -1,0 +1,121 @@
+#mobile .menu {
+  border: 1px solid white;
+}
+#mobile:hover {
+  cursor: pointer;
+}
+
+#mobile {
+  display: none;
+}
+
+/*navigation menu items*/
+#live-link {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+#live-link:hover p {
+  background-color: rgb(239 68 68);
+}
+#nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 33%;
+  /* border: 1px solid white; */
+}
+#nav-links li {
+  list-style: none;
+  padding: 0px 20px;
+  position: relative;
+}
+#nav-links li a:hover {
+  border-bottom: dashed 1px white;
+}
+#nav-links li button:hover {
+  border-bottom: dashed 1px white;
+}
+/*news menu items*/
+#news-links {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: black;
+  position: fixed;
+  right: 120px;
+  top: -1000px;
+  height: 60vh;
+  width: 300px;
+  z-index: 10;
+  color: white;
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+}
+#news-links li a:hover {
+    border-bottom: dashed 1px white;
+  }
+#news-and-events:hover > :last-child {
+  color: rgb(169, 38, 38);
+}
+#news-links.another-active {
+  top: 95px;
+}
+#news-links li {
+    margin-bottom: 25px;
+  }
+
+
+@media screen and (max-width: 990px) {
+  #mobile {
+    display: flex;
+  }
+  #nav-links li {
+    margin-bottom: 25px;
+  }
+  #nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 95px;
+    right: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: black;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0px 0px 10px;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+  }
+  #nav-links.active {
+    right: -300px;
+  }
+  #news-links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    right: -600px;
+    top: 95px;
+    height: 100vh;
+    width: calc(100% - 300px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    color: white;
+    padding: 40px 0px 0px 20px;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+  }
+  #news-links.active {
+    right: 300px;
+  }
+  #news-links li {
+    margin-bottom: 25px;
+  }
+}
